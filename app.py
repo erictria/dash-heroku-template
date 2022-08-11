@@ -13,7 +13,6 @@ from dash import html
 from dash.dependencies import Input, Output
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-%%capture
 gss = pd.read_csv("https://github.com/jkropko/DS-6001/raw/master/localdata/gss2018.csv",
                  encoding='cp1252', na_values=['IAP','IAP,DK,NA,uncodeable', 'NOT SURE',
                                                'DK', 'IAP, DK, NA, uncodeable', '.a', "CAN'T CHOOSE"])
@@ -295,4 +294,4 @@ def make_figure(bars, grouping):
     return fig
 
 if __name__ == '__main__':
-    clean_app.run_server(debug=True, port=8050)
+    app.run_server(debug=True, port=8050)
