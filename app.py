@@ -171,7 +171,9 @@ bin_box_fig = px.box(
             'Bin 5',
             'Bin 6'
         ]
-    }
+    },
+    color_discrete_map = {'male':'blue', 'female':'red'},
+    height = 800
 )
 bin_box_fig.update(layout = dict(title = dict(x=0.5)))
 bin_box_fig.update_layout(showlegend = False)
