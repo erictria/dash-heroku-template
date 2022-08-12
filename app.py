@@ -14,7 +14,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 gss = pd.read_csv("https://github.com/jkropko/DS-6001/raw/master/localdata/gss2018.csv",
                  encoding='cp1252', na_values=['IAP','IAP,DK,NA,uncodeable', 'NOT SURE',
-                                               'DK', 'IAP, DK, NA, uncodeable', '.a', "CAN'T CHOOSE"])
+                                               'DK', 'IAP, DK, NA, uncodeable', '.a', "CAN'T CHOOSE"], low_memory=False)
 
 mycols = ['id', 'wtss', 'sex', 'educ', 'region', 'age', 'coninc',
           'prestg10', 'mapres10', 'papres10', 'sei10', 'satjob',
@@ -293,4 +293,4 @@ def make_figure(bars, grouping):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8050)
+    app.run_server(debug=True)
